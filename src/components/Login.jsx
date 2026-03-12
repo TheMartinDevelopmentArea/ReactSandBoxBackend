@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './styles/login.css';
 
 export const Login = () => {
-    const [username, setUsername] = useState('');
+    const [identifier, setIdentifier] = useState(''); 
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
@@ -17,15 +17,18 @@ export const Login = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            const response = await api.post('token/', { username, password });
+            const response = await api.post('token/', { 
+                username: identifier, 
+                password 
+            });
 
             const { access, refresh } = response.data;
-
             login(access, refresh);
 
+            toast.success('Login realizado com sucesso!');
             navigate('/');
         } catch (err) {
-            const errorMsg = err.response?.data?.detail || "Verifique suas credenciais.";
+            const errorMsg = err.response?.data?.detail || "Usuário ou senha incorretos.";
             toast.error(`Erro ao logar: ${errorMsg}`);
         } finally {
             setIsLoading(false);
@@ -38,10 +41,10 @@ export const Login = () => {
                 <h2>Acesse sua conta</h2>
                 <form className="login-form" onSubmit={handleLogin}>
                     <input
-                        type="text"
-                        placeholder="Usuário"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        type="text" 
+                        placeholder="Usuário ou E-mail"
+                        value={identifier}
+                        onChange={(e) => setIdentifier(e.target.value)}
                         disabled={isLoading}
                         required
                     />
