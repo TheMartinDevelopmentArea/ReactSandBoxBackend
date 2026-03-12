@@ -11,6 +11,6 @@ Cada usuário tem sua própria loja isolada — tudo que ele cria, edita ou dele
 
 - Cadastro e login com JWT (sessões únicas)
 - Cada usuário tem sua própria loja 
-- Editor visual simples de layout da loja (arrastar/soltar ou blocos editáveis)
-- Upload de imagens de produtos 
+- Upload de imagens de produtos (preço, quantidade)
+- Criação de Categorias (você pode criar suas próprias categorias!!)
 - CRUD completo de produtos, categorias e informações da loja
