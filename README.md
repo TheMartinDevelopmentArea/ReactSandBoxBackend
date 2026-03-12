@@ -1,18 +1,16 @@
-# React + Vite
+# Loja Personalizável - Sandbox E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um **sandbox de loja online** onde cada usuário autenticado pode criar e personalizar sua própria vitrine virtual.  
+Frontend em **React** + **TypeScript** consumindo uma API **Django REST Framework** com autenticação **JWT** e armazenamento/supabase para arquivos e dados em tempo real.
 
-Currently, two official plugins are available:
+Cada usuário tem sua própria loja isolada — tudo que ele cria, edita ou deleta afeta **apenas sua própria instância**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
 
-## React Compiler
+##  Principais Características
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Cadastro e login com JWT (sessões únicas)
+- Cada usuário tem sua própria loja 
+- Editor visual simples de layout da loja (arrastar/soltar ou blocos editáveis)
+- Upload de imagens de produtos 
+- CRUD completo de produtos, categorias e informações da loja
