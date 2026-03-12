@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../services/apiConfig';
 import { ProductCard } from './ProductCard';
-import './styles/Home.css';
+import './styles/home.css';
 import { Loading } from './Loading';
 
 export const Home = () => {
