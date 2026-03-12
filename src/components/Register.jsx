@@ -16,7 +16,7 @@ export const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await api.post("/register/", formData);
+            await api.post("register/", formData);
             toast.success('Conta criada com sucesso!');
             navigate('/login');
         } catch (err) {
